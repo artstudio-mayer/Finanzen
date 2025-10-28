@@ -35,3 +35,22 @@ jobs:
           Einnahmen_Ausgaben.html
           Einnahmen_Maß_kum.html
           Einnahmen_Maß.html
+
+
+    - name: Diagramme ins Root-Verzeichnis kopieren
+
+      run: |
+        cp Einnahmen_Ausgaben.html $GITHUB_WORKSPACE/
+        cp Einnahmen_Maß_kum.html $GITHUB_WORKSPACE/
+        cp Einnahmen_Maß.html $GITHUB_WORKSPACE/
+
+    - name: Änderungen committen und pushen
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git add Einnahmen_Ausgaben.html Einnahmen_Maß_kum.html Einnahmen_Maß.html
+        git commit -m "Diagramme für GitHub Pages aktualisiert"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
