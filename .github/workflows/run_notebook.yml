@@ -37,13 +37,6 @@ jobs:
           Einnahmen_Maß.html
 
 
-    - name: Diagramme ins Root-Verzeichnis kopieren
-
-      run: |
-        cp Einnahmen_Ausgaben.html $GITHUB_WORKSPACE/
-        cp Einnahmen_Maß_kum.html $GITHUB_WORKSPACE/
-        cp Einnahmen_Maß.html $GITHUB_WORKSPACE/
-
     - name: Änderungen committen und pushen
       run: |
         git config --global user.name 'github-actions'
