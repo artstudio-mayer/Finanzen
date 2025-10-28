@@ -21,7 +21,7 @@ jobs:
     - name: Abhängigkeiten installieren
       run: |
         pip install -r requirements.txt
-        pip install papermill
+        pip install papermill ipykernel
 
     - name: Notebook ausführen
       run: |
