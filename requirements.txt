@@ -1,5 +1,4 @@
-plotly.express
-requests
 pandas
-nump
-plotly.graph_objects
+numpy
+plotly
+requests
