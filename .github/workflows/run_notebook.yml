@@ -36,10 +36,16 @@ jobs:
           Einnahmen_Maß_kum.html
           Einnahmen_Maß.html
 
+    
+    - name: Setze Remote-URL mit PAT
+      run: |
+        git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/artstudio-mayer/Finanzen.git
+
     - name: Änderungen committen und pushen
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         git add Einnahmen_Ausgaben.html Einnahmen_Maß_kum.html Einnahmen_Maß.html
         git commit -m "Diagramme für GitHub Pages aktualisiert" || echo "Keine Änderungen zum Commit"
-        git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/artstudio-mayer/Finanzen.git HEAD:main
+        git push origin HEAD:main
+
