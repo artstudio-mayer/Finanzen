@@ -35,6 +35,7 @@ jobs:
           Einnahmen_Ausgaben.html
           Einnahmen_Maß_kum.html
           Einnahmen_Maß.html
+
     - name: Änderungen committen und pushen
       run: |
         git config --global user.name 'github-actions'
