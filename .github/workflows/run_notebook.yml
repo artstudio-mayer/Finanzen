@@ -28,7 +28,7 @@ jobs:
         papermill dein_notebook.ipynb ausgegebenes_notebook.ipynb
 
     - name: Plotly-Diagramme als Artefakte speichern
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: plotly-diagramme
         path: |
