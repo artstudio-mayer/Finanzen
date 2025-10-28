@@ -25,7 +25,7 @@ jobs:
 
     - name: Notebook ausführen
       run: |
-        papermill dein_notebook.ipynb ausgegebenes_notebook.ipynb
+        papermill Datenaufbereitung.ipynb ausgegebenes_notebook.ipynb
 
     - name: Plotly-Diagramme als Artefakte speichern
       uses: actions/upload-artifact@v4
