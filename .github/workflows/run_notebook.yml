@@ -35,6 +35,8 @@ jobs:
       with:
         name: plotly-diagramme
         path: |
+          Übersicht.html
+          Maße_Tabelle.html
           Einnahmen_Ausgaben.html
           Einnahmen_Maß_kum.html
           Einnahmen_Maß.html
@@ -43,7 +45,7 @@ jobs:
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        git add Einnahmen_Ausgaben.html Einnahmen_Maß_kum.html Einnahmen_Maß.html
+        git add Übersicht.html Maße_Tabelle.html Einnahmen_Ausgaben.html Einnahmen_Maß_kum.html Einnahmen_Maß.html
         git commit -m "Diagramme für GitHub Pages aktualisiert" || echo "Keine Änderungen zum Commit"
         git push
 
