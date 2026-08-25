@@ -43,12 +43,15 @@ jobs:
           Umsatzstärkster_Verkaufskanal.html
           Umsatzstärkster_Verkaufskanal_pro_Jahr.html
           Umsatzstärkste_Ausstellung.html
+          Jahresübersicht_mobile.html
+          Umsatzstärkster_Verkaufskanal_mobile.html
+          Umsatzstärkste_Ausstellung mobile.html
 
     - name: Änderungen committen und pushen
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        git add Jahresübersicht.html Umsatzstärkstes_Quartal.html Quartalsübersicht.html Umsatzstärkster_Monat.html Monatsübersicht.html Umsatzstärkster_Verkaufskanal.html Umsatzstärkster_Verkaufskanal_pro_Jahr.html Umsatzstärkste_Ausstellung.html
+        git add Jahresübersicht.html Umsatzstärkstes_Quartal.html Quartalsübersicht.html Umsatzstärkster_Monat.html Monatsübersicht.html Umsatzstärkster_Verkaufskanal.html Umsatzstärkster_Verkaufskanal_pro_Jahr.html Umsatzstärkste_Ausstellung.html Jahresübersicht_mobile.html Umsatzstärkster_Verkaufskanal_mobile.html Umsatzstärkste_Ausstellung_mobile.html
         git commit -m "Diagramme für GitHub Pages aktualisiert" || echo "Keine Änderungen zum Commit"
         git push
 
